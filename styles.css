@@ -1,7 +1,6 @@
 * {
     font-family: Arial, sans-serif;
     line-height: 1.5rem;
-    
 }
 
 body {
@@ -9,11 +8,11 @@ body {
     background-size: contain;
     background-position: center 0;
     background-repeat: no-repeat;
-    padding: 0 10% 0 10%;
 }
 
 .flex-container {
     display:flex;
+    flex-direction: column;
     background-color: none;
     color:white;
     position:sticky;
@@ -40,8 +39,35 @@ h1 {
     text-shadow: 2px 2px grey;
 }
 
-.navbar  {
-    top: 80px;
-    background-color: lightgray;
+p {
+    padding: 0 10% 0 10%;
 }
 
+.navbar  {
+    position:sticky;
+    top: 80px;
+    background-color: none;
+    padding: 0 0 0 0;
+}
+a {
+  background-color: gray;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+a:link {
+  color: white;
+}
+a:visited {
+  color: lightcyan;
+}
+a:hover {
+  color: lightgreen;
+}
+a:active {
+  color: white;
+}
+
+.site-footer {
+    background-color: lightgrey;
+}
