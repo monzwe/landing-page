@@ -64,11 +64,13 @@ h2 {
 }
 
 p {
-    padding: 3% 3% 3% 3%;
+    padding: 0 10%;
 }
-p.strong{
+p.strong {
    background-color: white;
    color:crimson;
+   padding: 5px;
+   margin: 0 10%;
 }
 
 .nav {
