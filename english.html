@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amis du Salève</title>
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<header>
+  <a href="index.html">Association genevoise des amis du Salève (AGAS)</a>  
+</header>
+
+<div class="container">
+  <img src="assets/saleve-banner730x140.jpg" alt="AGAS" style="width:100%;">
+  <div class="text-block">
+    <h1>Welcome</h1>
+  </div>
+</div>
+
+<div class="flex-container">
+    <div class="main">
+      <h2>Free hikes on the Salève</h2>
+      <p>Every Sunday, hikers meet at 10:00 am <a href="/infos-pratiques">at the terminus of bus 8 in Veyrier-Douane 
+      </a>, 100 meters from the customs on the Swiss side. A representative of the Association Genevoise des Amis du Salève 
+      (AGAS) will be waiting for you in any weather. No need to sign up in advance. Depending on the number of volunteer 
+      guides present, <a href="sentiers.html">several itineraries may be proposed.</a> Depending on the chosen circuit, 
+      count on 5 to 8 hours of walking, including 3 hours of ascent at a steady pace (800 meters of altitude difference). 
+      Departure on foot from the meeting point. You will need proper hiking shoes, snow spikes in winter if icy, hat and sun cream in summer, 
+      one or two hiking poles (optional), waterproof jacket, passport, money, picnic and drinking water.</p>
+      
+      <p class="strong">You need to be in good physical condition and wear appropriate footwear (no sandals, flip-flops, etc!) 
+      The Salève is a real mountain. Also be sure to bring enough water, as there are no sources along the hiking paths <br><br>
+      By joining, you release AGAS from all responsibility in case of accidents. We are not professional
+      mountain guides. We just use this platform to bring people with similar interests together and to enjoy nature. 
+      Join at your own risk. You are responsible for your own safety, and for having adequate insurance cover 
+      for anything that might happen to you during this event.</p>
+    </div>
+    <div>
+        <p class="nav">
+        <a class="navlinks" href="saleve.html">Le Salève</a><br>
+        <a class="navlinks" href="association.html">L'association</a><br>
+        <a class="navlinks" href="infopratiques.html">Infos&nbsp;pratiques</a><br></p>
+    </div>
+
+</div>
+
+
+<footer>
+© 2026 AGAS. All rights reserved<br>
+  <a href="#">WhatsApp</a>  |  <a href="#">Facebook</a><br>
+  <a href="#NB">The association declines all responsibility in the event of an accident..</a><br>
+</p>
+</footer>
+
+    </body>
+</html>---
+
+
+
+
+<script>
+var d = new Date();
+var today = new Date();
+d.setDate(d.getDate() + (7 + 7 - d.getDay()) % 7);
+if(today.getDay() == 0 && today.getHours() > 9){
+d.setDate(d.getDate() + 7 );
+}
+var options = {'weekday': 'long', 'month': 'long', 'day': '2-digit', 'year': 'numeric'};
+var date = d.toLocaleString('en-US', options);
+document.getElementById('nextMeeting').innerHTML = "Next hike: "+date.toString();
+</script>

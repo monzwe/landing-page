@@ -1,0 +1,60 @@
+---
+layout: page
+title: Bienvenido al Salève
+share-title: Senderismo en la Salève en grupo
+share-description: Caminatas gratuitas en la Salève todos los domingos. No es necesario inscribirse, venga directamente al punto de encuentro.
+language: es
+---
+<div class="welcome">
+   <div style="align:right;padding: 0 1.5rem 0">
+    Hello<br>
+    Ciao<br>
+    Bonjour<br>
+    Guten Tag<br>
+    Aloha
+   </div>
+   <div style="flex-basis: 280px">
+     <img src="/assets/img/welcome-heart-280.png" width="280" height="233" alt="Welcome Heart">
+   </div>
+   <div style="padding: 0 1.5rem 0">
+    Shalom<br>
+    Hola<br>
+    Hej<br>
+    Kon-nichiwa<br>
+    Olà
+   </div>
+</div>
+
+<p style="text-align:center">
+ <a href="/english"><img src="/assets/img/us.png" width="20" height="20" alt="US flag"> This page is available in English</a>
+ <br><a href="/deutsch"><img src="/assets/img/de.png" width="20" height="20" alt="DE flag"> Diese Seite ist auf Deutsch verfügbar</a>
+</p>
+
+<h2>Excursiones gratuitas al Salève</h2>
+<p>La "Asociación Ginebrina de Amigos del Salève" (AGAS), organiza excursiones gratuitas al Salève, todos los domingos, en grupo, sin inscripción previa; cita a las 10:00h - <a href="/infos-pratiques">terminal del bus 8 - Veyrier-Douane</a> (route du Pas-de-l'Echelle 111, 1255 Veyrier), salida 10:00h en punto.
+Dependiendo del número de guías voluntarios presentes, <a href="/sentiers">se pueden ofrecer varias rutas.</a>
+Contar entre 5 y 8 horas de marcha (de las cuales 3 horas de subida - 800 m de desnivel). Se recomiendan buenas botas de marcha, impermeable, pasaporte, euros, comida y bebida (pic-nic); es indispensable tener una buena condición física.</p>
+
+<h2 id="nextMeeting"></h2>
+
+<div class="box-warning">
+<p><strong>Una buena condición física</strong> y un buen calzado (¡nada de pies descalzos, chanclas, etc.!) son absolutamente necesarios. El Salève es una auténtica montaña, la segunda más mortífera después del Mont-Blanc en la Alta Saboya.
+
+<br><strong>Lleve también suficiente agua</strong>, ya que no hay manantiales en los senderos de la Salève.</p>
+</div>
+
+<div class="box-error">
+La asociación declina toda responsabilidad en caso de accidente.
+</div>
+
+<script>
+var d = new Date();
+var today = new Date();
+d.setDate(d.getDate() + (7 + 7 - d.getDay()) % 7);
+if(today.getDay() == 0 && today.getHours() > 9){
+d.setDate(d.getDate() + 7 );
+}
+var options = {'weekday': 'long', 'month': 'long', 'day': '2-digit', 'year': 'numeric'};
+var date = d.toLocaleString('es-ES', options);
+document.getElementById('nextMeeting').innerHTML = "Próximo senderismo: "+date.toString();
+</script>
