@@ -9,12 +9,9 @@
 </head>
 
 <body>
-<header>
-        Association genevoise des amis du Salève (AGAS) |  
-<a href="english.html"><img src="assets/us.png" width="20" height="20" alt="EN "> Welcome  |  </a>
-<a href="deutsch.html"><img src="assets/de.png" width="20" height="20" alt="DE "> Willkommen  |  </a>
-<a href="espagnol.html"><img src="assets/es.png" width="20" height="20" alt="ES "> Benvenido</a>
-</p>
+
+<header class="header">
+  <p class="header">Association genevoise des amis du Salève (AGAS)</p>
 </header>
 
 <div class="container">
@@ -24,8 +21,22 @@
   </div>
 </div>
 
-<div class="flex-container">
-    <div class="main">
+<div>
+  <img src="assets/welcome-heart-280.png" alt="Hello" style="width:10%; height:auto;">
+      <a href="english.html">Welcome</a>  |  
+      <a href="deutsch.html">Willkommen</a>  |  
+      <a href="espagnol.html">Benvenido</a>
+</div>
+
+<div class="flex-container">  
+      <div class="flex-container-menu id="sidebar">
+        <p class="navtxt">
+          <a class="navlinks" href="saleve.html">Salève</a><br>
+          <a class="navlinks" href="association.html">Association</a><br>
+          <a class="navlinks" href="infopratiques.html">Info</a><br>
+        </p>  
+    </div> 
+    <div class="flex-container-main">
       <h2>Randos gratuites au Salève</h2>
       <p>Tous les dimanches, les amoureux de randonnées pédestres se donnent <a href="infopratiques.html">rendez-vous</a> 
         à 10h00 au terminus du <a href="https://www.tpg.ch/fr/lignes/8">bus 8</a> à Veyrier-Douane, 
@@ -34,7 +45,9 @@
          Selon le circuit choisi, comptez 5 à 8 heures de marche, dont 3 heures de montée à un rythme soutenu 
          (800 mètres de dénivelé). Départ à pied du point de RDV. Il vous faut de bonnes chaussures de marche, crampons en hiver si glace, 
          chapeau et crème solaire en été, un ou deux bâtons, veste imperméable, passeport, argent, pique-nique et eau potable. 
-        </p>
+      </p>
+
+      <h2 id="nextMeeting"></h2>
 
       <h2 id="NB">Avertissement</h2>
       <p class="strong">Il faut absolument une bonne condition physique et de bonnes chaussures (pas de nu-pieds, tongs, etc!)
@@ -47,12 +60,6 @@
     d'assurance adéquate pour cet événement.</p>
 
     </div>
-    <div>
-        <p class="nav">
-        <a class="navlinks" href="saleve.html">Le Salève</a><br>
-        <a class="navlinks" href="association.html">L'association</a><br>
-        <a class="navlinks" href="infopratiques.html">Infos&nbsp;pratiques</a><br></p>
-    </div>
 </div>
 
 <footer>
@@ -64,3 +71,15 @@
 </body>
 
 </html>
+
+<script>
+var d = new Date();
+var today = new Date();
+d.setDate(d.getDate() + (7 + 7 - d.getDay()) % 7);
+if(today.getDay() == 0 && today.getHours() > 9){
+d.setDate(d.getDate() + 7 );
+}
+var options = {'weekday': 'long', 'month': 'long', 'day': '2-digit', 'year': 'numeric'};
+var date = d.toLocaleString('fr-CH', options);
+document.getElementById('nextMeeting').innerHTML = "Prochaine rando: "+date.toString()+" à 10h00";
+</script>

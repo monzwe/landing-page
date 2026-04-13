@@ -1,90 +1,36 @@
 * {
     font-family: Arial, sans-serif;
     line-height: 1.5rem;
+    box-sizing: border-box;
+}
+
+.header {
+    padding: 0;
+    text-align: center;
+    background-color: lightgray;
+    position: sticky;
+    top: 0px;
+    width: 100%;
 }
 
 body {
-
+    margin: 0;
     background-color: #F7E8CB;
+    text-align: left;
 }
 
-header {
-    text-transform: uppercase;
-    font-size: 12px;
-}
-
+/* Top image with text overlay */
 .container {
   position: relative;
+  padding-bottom: 0;
 }
-
 /* Centered title text */
 .text-block {
   position: absolute;
-  top: 10%;
+  top: 0;
   width: 100%;
-  text-align:left;
-}
-
-@media screen and (min-width: 601px) {
-  .text-block {
-    font-size: 28px;
-  }
-}
-@media screen and (max-width: 600px) {
-  .text-block {
-    font-size: 18px;
-  }
-}
-.flex-container {
-    display:flex;
-    background-color: none;
-    color:black;
-}
-.flex-container div {
-    flex: 1;
-}
-.flex-container .main {
-  flex: 4 1 0%;
-}
-.flex-container .nav {
-    background-color: lightgray;
-}
-
-h1 {
-    color: white;
-    font-weight: 900;
-    text-shadow: 2px 2px grey;
-    line-height: 1.5;
-}
-
-h2 {
-    font-size: large;
-    color: #555555;
-    line-height: 1.5;
-}
-
-p {
-    padding: 0 10%;
-}
-p.strong {
-   background-color: white;
-   color:crimson;
-   padding: 5px;
-   margin: 0 10%;
-}
-
-.nav {
-    position:sticky;
-    top: 80px;
-    line-height: 3;
-    color: black;
-    font-size: 12px;
-    font-weight: 900;
-}
-
-.navlinks {
-background-color: lightgrey;
-text-transform: uppercase;
+  font-size: 4vw;
+  text-align:center;
 }
 
 a {
@@ -96,9 +42,63 @@ a:hover {
     background-color: white;
 }
 
-footer {
+.flex-container {
+    display:flex;
+    width: 100%;
+    padding-top: 0;
+}
+.flex-container-main {
+  flex: 1;
+  padding: 10px;
+  text-align: left;
+}
+.flex-container-menu {
     background-color: lightgray;
-    font-size: 12px;
+    padding: 0 0.5rem;
+    width: 15vw;
+    transition: all 2s;
+}
+.flex-container-menu:hover {
+    width: 25vw;
+}
+
+h1 {
+    color: white;
+    font-weight: 900;
+    text-shadow: 2px 2px grey;
+    line-height: 1.5;
+}
+
+h2 {
+    color: #555555;
+    line-height: 1.5;
+    font-size: 1.3rem;
+}
+
+p.strong {
+   background-color: white;
+   color:crimson;
+   padding: 5px;
+   margin: 0 10%;
+}
+
+p.navtxt {
+    position:sticky;
+    top: 80px;
+    line-height: 3;
+    color: black;
+    font-weight: 900;
+    text-align: left;
+}
+
+.navlinks {
+text-transform: uppercase;
+}
+
+footer {
+    width: 100%;
+    background-color: lightgray;
+    font-size: 0.8rem;
     text-align: center;
 }
 
