@@ -5,7 +5,7 @@
 }
 
 .header {
-    padding: 0;
+    padding-top: 0;
     text-align: center;
     background-color: lightgray;
     position: sticky;
@@ -27,19 +27,29 @@ body {
 /* Centered title text */
 .text-block {
   position: absolute;
-  top: 0;
+  top: 35%;
   width: 100%;
-  font-size: 4vw;
   text-align:center;
 }
+p {
+    padding-left: 2rem;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
 
 a {
-color: #0e90a7;
+color: #0b879c;
 text-decoration: none;
 }
 
 a:hover {
-    background-color: white;
+    color: #0abcdb;
 }
 
 .flex-container {
@@ -56,23 +66,31 @@ a:hover {
     background-color: lightgray;
     padding: 0 0.5rem;
     width: 15vw;
-    transition: all 2s;
+ /*   transition: all 2s;*/
 }
-.flex-container-menu:hover {
-    width: 25vw;
-}
+ /*  .flex-container-menu:hover {
+ width: 25vw;
+}*/
 
 h1 {
     color: white;
     font-weight: 900;
     text-shadow: 2px 2px grey;
-    line-height: 1.5;
+    font-size: 7vw;
 }
 
 h2 {
     color: #555555;
     line-height: 1.5;
     font-size: 1.3rem;
+    text-align: center;
+}
+
+h4 {
+    font-size: 2vw;
+    color: white;
+    text-align: center;
+    text-shadow: 1px 1px 10px white;
 }
 
 p.strong {
@@ -92,7 +110,7 @@ p.navtxt {
 }
 
 .navlinks {
-text-transform: uppercase;
+    text-transform: uppercase;
 }
 
 footer {
