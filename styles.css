@@ -11,6 +11,7 @@
     font-weight: 600;
     font-size: 18px;
     width: 100%;
+    overflow: hidden;
 }
 
 .navbar a {
@@ -23,15 +24,13 @@
   text-decoration: none;
 }
 
-.dropdown {
-  float: right;
-  overflow: hidden;
-}
-
 .navbar a:hover, .dropdown:hover .dropbtn, .dropbtn:focus {
   background-color: #eee;
 }
 
+.dropdown {
+  float: right;
+}
 
 body {
     margin: 0;
