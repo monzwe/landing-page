@@ -1,38 +1,48 @@
 * {
     font-family: Arial, sans-serif;
-    line-height: 1.5rem;
+    line-height: 1.7rem;
     box-sizing: border-box;
 }
 
-.header {
-    padding-top: 0;
-    text-align: center;
-    background-color: lightgray;
-    position: sticky;
-    top: 0px;
+.navbar {
+  overflow: hidden;
+    padding: 8px 5px; 
+    background-color: #e6e6e6;
+    font-weight: 600;
+    font-size: 18px;
     width: 100%;
 }
 
+.navbar a {
+  float: left;
+  color: black;
+  font-size: 14px;
+  text-transform:uppercase;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: right;
+  overflow: hidden;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn, .dropbtn:focus {
+  background-color: #eee;
+}
+
+
 body {
     margin: 0;
-    background-color: #F7E8CB;
+    background-color: #fde5cb;
     text-align: left;
 }
 
-/* Top image with text overlay */
-.container {
-  position: relative;
-  padding-bottom: 0;
-}
-/* Centered title text */
-.text-block {
-  position: absolute;
-  top: 35%;
-  width: 100%;
-  text-align:center;
-}
 p {
-    padding-left: 2rem;
+    padding: 0 15vw;
+    font-size: 18px;
+    color: #444444
 }
 
 .center {
@@ -42,35 +52,25 @@ p {
   width: 50%;
 }
 
+a:visited {
+    color:#444444
+}
 
-a {
+#top a {
 color: #0b879c;
 text-decoration: none;
 }
-
-a:hover {
+#top a:hover {
     color: #0abcdb;
 }
 
-.flex-container {
-    display:flex;
-    width: 100%;
-    padding-top: 0;
+#bot a {
+color: #000000;
+text-decoration: none;
 }
-.flex-container-main {
-  flex: 1;
-  padding: 10px;
-  text-align: left;
+#bot a:hover {
+    color: #0b879c;
 }
-.flex-container-menu {
-    background-color: lightgray;
-    padding: 0 0.5rem;
-    width: 15vw;
- /*   transition: all 2s;*/
-}
- /*  .flex-container-menu:hover {
- width: 25vw;
-}*/
 
 h1 {
     color: white;
@@ -80,10 +80,10 @@ h1 {
 }
 
 h2 {
-    color: #555555;
+    color: #414141;
     line-height: 1.5;
-    font-size: 1.3rem;
-    text-align: center;
+    font-size: 2.2rem;
+    padding:0 15vw;
 }
 
 h4 {
@@ -93,30 +93,35 @@ h4 {
     text-shadow: 1px 1px 10px white;
 }
 
-p.strong {
-   background-color: white;
-   color:crimson;
-   padding: 5px;
-   margin: 0 10%;
+.strong {
+    font-family:'Courier New', Courier, monospace;
+    font-weight:700;
 }
 
-p.navtxt {
-    position:sticky;
-    top: 80px;
-    line-height: 3;
-    color: black;
-    font-weight: 900;
-    text-align: left;
+p.warning {
+    background-color: seashell;
+    border-color:  gold;
+    border-style: solid;
+    border-width: 0 0 0 10px;
+    margin: 30px 15vw ;
+    padding: 30px 10px;
+    font-family: 'Courier New', Courier, monospace;
 }
 
-.navlinks {
-    text-transform: uppercase;
+p.decline {
+    background-color: rgb(248, 242, 237);
+    border-color:  crimson;
+    border-style: solid;
+    border-width: 0 0 0 6px;
+    margin: 20px 25vw;
+    padding: 15px 10px;
+    font-family: 'Courier New', Courier, monospace;
 }
+
 
 footer {
     width: 100%;
-    background-color: lightgray;
-    font-size: 0.8rem;
+    background-color: rgb(230, 230, 230);
     text-align: center;
+    padding: 8px 30px;
 }
-
