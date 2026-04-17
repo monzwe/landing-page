@@ -3,76 +3,123 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/0f006934a4.js" crossorigin="anonymous"></script>
     <title>Amis du Salève</title>
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
-<header class="header">
-    <a class="navlinks" href="index.html">&#9664 Association genevoise des amis du Salève (AGAS)</a>
-</header>
+<div class="navbar">
+    <div class="navbar">
+        <a href="index.html">&#9664 Association genevoise des amis du Salève (AGAS)</a>
+        <div class="dropdown">
+            <a href="#sentiers">Les sentiers</a>
+            <a href="#autres-randos">Autres randos</a>
+        </div>
 
-<h1>Le Salève</h1> 
-
-<div class="flex-container">  
-      <div class="flex-container-menu id="sidebar">
-        <p class="navtxt">
-          <a class="navlinks" href="saleve.html">Salève</a><br>
-          <a class="navlinks" href="association.html">Association</a><br>
-          <a class="navlinks" href="infos.html">Info</a><br>
-        </p>  
-    </div> 
-    <div class="flex-container-main">
-
-        <p>Il y a une multitude de sentiers pour randonner au Salève. L'AGAS ne propose que les chemins officiels (balisés) 
-            ne pas dépassant le niveau T2 selon les <a href="https://www.sac-cas.ch/fileadmin/Ausbildung_und_Wissen/Tourenplanung/Alpinmerkbl%C3%A4tter/20230808_CAS_echelle_cotation_randonnee_final.pdf">
-            cotations du Club Alpin Suisse</a>. Pour la montée depuis Veyrier, l'AGAS propose essentiellement 3 sentiers:</p>
-        <table>
-        <tr>
-            <td><img src="assets/PasEchelle.jpg" style="height:150px; width: auto"</th>
-            <td><img src="assets/Grande-Gorge.jpg" style="height:150px; width: auto"</td>
-            <td><img src="assets/TrouDeLaTine.jpg" style="height:150px; width: auto"</td>
-        </tr>
-        <tr>
-            <td>Pas de l'Echelle</td>
-            <td>Grande Gorge</td>
-            <td>Sentier d'Orjobet</td>
-        </tr>
-        <tr>
-            <td>2 heures de montée jusqu'au téléphérique, moyennement difficile, 
-                numéro 1 sur la carte ci-dessous</td>
-            <td>3 heures de montée, 
-                sentier dans les bois, relativement raide par endroits (difficile, numéro 5 sur la carte)</td>
-            <td>4 heures de montee, 
-                passant par la grotte d'Orjobet et le Trou de la Tine,
-                puis possibilité de longer le Salève par la Corraterie (difficile, numéro 4 sur la carte)</td>
-        </tr>
-        </table>
-        <p>Au retour, ceux qui n'ont pas laissé leur véhicule à Veyrier font souvent la traversée 
-            par la crête (1 heure, belles vues) pour descendre à Croix-de-Rozon (bus 82 et 44 vers la ville de Genève, 
-            nous sommes normalement en bas entre 16h et 17h). </p>
     </div>
 </div>
-<p>Suivant la demande, la météo, le niveau des marcheurs et la disponibilité des bénévoles, 
-nous proposons d'autres itinéraires depuis Veyrier, ou même un rendez-vous supplémentaire plus au sud du Salève 
-pour explorer les chemins au sud de la Croisette. Voici les itinéraires que nous avons pratiqués en 2026,
-numérotés par ordre de fréquence:
-</p>
-<img src="assets/2025-Chemins-v2.png" alt="Sentiers du Salève" style="width: 80%; height: auto;" class="center">
-<h2>Autres randos</h2>
-<p>Si vous désirez faire d'autres randonnées, nous vous recommandons:</p>
-<ul>
-    <li>L'association <a href="https://www.randonneeoxygene74.com/">Oxygène 74</a>, affiliée à la FFRP (Fédération Française de la Randonnée Pédestre). 
-        Ils randonnent en Haute-Savoie et dans le Jura et ils offrent aussi des sorties de marche nordique. 
-        Sur inscription préalable, déplacements en covoiturage. Possibilité de participer à la journée. </li>
-    <li><a href="https://www.geneverando.ch">Genève Rando</a>, l'organisation cantonale de randonnée affiliée a Suisse Rando. 
-    Elle propose chaque année une centaine de <a href="https://www.geneverando.ch/fr/randonner/randonnees-accompagnees">
-        randonnées accompagnées</a> dans le canton de Genève, en Suisse romande et en France voisine. 
-        Déplacements en transports en commun (bus, train). Sur inscription préalable, possibilité de participer à l'essai 
-        sans être membre. <a href="https://www.geneverando.ch/fr/association/english-speakers">Information for English 
-            speakers</a></li>
-</ul>
+
+<div id="top">
+    <h1>Le Salève</h1>
+
+    <h2 id="sentiers">Les sentiers</h2> 
+
+    <p>Il y a une multitude de sentiers pour randonner au Salève. L'AGAS ne propose que les chemins officiels (balisés) 
+            ne pas dépassant le niveau T2 selon les 
+            <a href="https://www.sac-cas.ch/fileadmin/Ausbildung_und_Wissen/Tourenplanung/Alpinmerkbl%C3%A4tter/20230808_CAS_echelle_cotation_randonnee_final.pdf">
+            cotations du Club Alpin Suisse</a>. Pour la montée depuis Veyrier, l'AGAS propose essentiellement 3 sentiers:</p>
+    <div class="container">
+        <div>
+            <div title="Photo: Cathy Tolve"><img class="center" src="assets/PE-marches_2025Apr_Cathy.jpg" alt="Escalier" style="height:200px; width: auto"></div>
+            <div class="legend">Pas de l'Echelle:<br>2 heures jusqu'au téléphérique (moyennement difficile)</div>
+        </div>
+
+        <div> 
+            <div><img class="center" src="assets/Grande-Gorge.jpg" alt="Pente terreuse" style="height:200px; width: auto"></div>   
+            <div class="legend">Grande Gorge:<br>3 heures, relativement raide par endroits (difficile)</div>
+        </div>
+
+        <div> 
+            <div title="Photo: Hong Fan"><img class="center" src="assets/EntreeOrjobet_20260405-Hong.jpeg" alt="Grotte" style="height:200px; width: auto"></div>
+            <div class="legend">Sentier d'Orjobet:<br>4 heures, passant par la grotte d'Orjobet (difficile)</div>   
+        </div>
+    </div>
+
+<div id="top"> 
+
+    <p>Pour le retour à pied comptez environ un tiers de temps en moins que pour la montée. Si vous êtes fatigués, vous pouvez descendre <a href="https://www.telepherique-du-saleve.com/infos-pratiques/horaires-acces/">
+        en téléphérique</a>. Et ceux qui n'ont pas besoin de retourner à Veyrier continuent souvent par la crête pour descendre à Croix-de-Rozon (bus 82 et 44 vers Genève). 
+        Nous sommes normalement en bas entre 16h et 17h.</p> 
+
+    <img title="Photo: Monika Zweygarth" src="assets/CretePhotos-mo.jpg" class="center" style="height:150px; width: auto" alt="Sur la crête" 
+        style="height:auto; width: auto">
+    <p class="legend">Vues depuis la crête (une heure de traversée, facile) </p>
+    
+
+    <p>Suivant la demande, la météo, le niveau des marcheurs et la disponibilité des bénévoles, 
+        nous proposons d'autres itinéraires depuis Veyrier, ou même un deuxième rendez-vous à un autre point de départ 
+        pour explorer les chemins au sud de la Croisette. Un dessin des chemins que nous avons parcourus en 2025 se trouve 
+        à la fin de notre rapport annuel.</p>
+   
+    <h2 id="autres-randos">Autres randos</h2>
+    <p>Si vous désirez faire des randonnées ailleurs qu'au Salève, nous vous recommandons:</p>
+    <ul>
+        <li>L'association <a href="https://www.randonneeoxygene74.com/">Oxygène 74</a>, affiliée à la FFRP (Fédération Française de la Randonnée Pédestre). 
+            Ils randonnent en Haute-Savoie et dans le Jura et ils offrent aussi des sorties de marche nordique. 
+            Sur inscription préalable, déplacements en covoiturage. Possibilité de participer à la journée. </li>
+        <li><a href="https://www.geneverando.ch">Genève Rando</a>, l'organisation cantonale de randonnée affiliée a Suisse Rando. 
+        Elle propose chaque année une centaine de <a href="https://www.geneverando.ch/fr/randonner/randonnees-accompagnees">
+            randonnées accompagnées</a> dans le canton de Genève, en Suisse romande et en France voisine. 
+            Déplacements en transports en commun (bus, train). Sur inscription préalable, possibilité de participer à l'essai 
+            sans être membre. <a href="https://www.geneverando.ch/fr/association/english-speakers">Information for English 
+                speakers</a></li>
+    </ul>
+</div>
+
+<footer id="bot">
+    <div>
+        <p></p>
+        <a href="mailto:agas@saleve.xyz">
+        <span class="fa-stack fa-lg">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+        </span></a>
+
+        <a href="mailto:agas@saleve.xyz">
+        <span class="fa-stack fa-lg">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i class="fa fa-whatsapp fa-stack-1x fa-inverse"></i>
+        </span></a>
+
+        <a href="https://wa.me/41765034533">
+        <span class="fa-stack fa-lg">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+        </span></a>
+
+        <a href="https://www.facebook.com/LesAmisduSaleve">
+        <span class="fa-stack fa-lg">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i class="fa fa-facebook-square fa-stack-1x fa-inverse"></i>
+        </span></a>
+
+        <a href="+41225577593">
+        <span class="fa-stack fa-lg">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i class="fa fa fa-phone fa-stack-1x fa-inverse"></i>
+        </span></a>
+    </div>
+    <p class="decline"><a href="https://www.saleve.xyz/disclaimer/">L'association décline toute 
+        responsabilité en cas d'accident.</a></p>
+    <p><img src="assets/VilleGE.png" style="width:7vw; height: auto; padding-top: 10px;"><br>
+    Association subventionnée par la Ville de Genève et reconnue d'utilité publique • 
+    <a href="https://www.saleve.xyz/legal/">Mentions légales</a> • <a href="https://www.saleve.xyz/contact/">Contact</a></p>
+    <p>AGAS • 2026 •  <a href="https://www.saleve.xyz">www.saleve.xyz</a></p>
+
+</footer>
 
 </body>
 </html>
