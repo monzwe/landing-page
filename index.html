@@ -7,6 +7,26 @@
     <title>Amis du Salève</title>
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        #controls { text-align: center; margin-bottom: 20px; }
+
+        #cards {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        justify-content: flex-start;
+        margin: 0 auto;
+        }
+
+        .card {
+        background: none;
+        border: none;
+        padding: 15px;
+        }
+
+    .card h2 { margin: 0 0 10px; font-size: 18px; }
+    .card p { margin: 5px 0; color: black; }
+    </style>
 </head>
 
 <body>
@@ -24,23 +44,32 @@
 
 <div id="top">
 
-<img src="assets/saleve-banner.jpg" alt="AGAS" style="width:100%;">
-<h1>Bienvenue</h1>
+    <img src="assets/saleve-banner.jpg" alt="AGAS" style="width:100%;">
+    <h1>Bienvenue</h1>
 
       <h2>Randonnées pédestres gratuites au Salève</h2>
       <p>Tous les dimanches, les amoureux de randonnées pédestres se donnent <a href="https://www.saleve.xyz/infos-pratiques/">
         rendez-vous
         à 10h00</a> au terminus du <a href="https://www.tpg.ch/fr/lignes/8">bus 8</a> à Veyrier-Douane, 
-        à 100 mètres de la douane côté Suisse. Un responsable de l'Association Genevoise des Amis du Salève (AGAS) vous y attend par tous les temps. Il n y a pas d'inscription préalable.</p>
-      <p>Suivant le nombre de guides bénévoles présents, <a href="https://www.saleve.xyz/sentiers/">plusieurs itinéraires pourront être proposés</a>.
-         Selon le circuit choisi, comptez 5 à 8 heures de marche, dont 3 heures de montée à un rythme soutenu 
-         (800 mètres de dénivelé). Départ à pied du point de RDV. Il vous faut de bonnes chaussures de marche, crampons en hiver si glace, 
+        à 100 mètres de la douane côté Suisse. Un responsable de l'Association Genevoise des Amis du Salève (AGAS) vous y attend par tous les temps. Il n y a pas d'inscription préalable. 
+        Il vous faut de bonnes chaussures de marche, crampons en hiver si glace, 
          chapeau et crème solaire en été, un ou deux bâtons, veste imperméable, passeport, argent, pique-nique et eau potable. 
       </p>
+ 
+    <h3 id="nextMeeting"></h3>
+        <p>Suivant le nombre de guides bénévoles présents, <a href="https://www.saleve.xyz/sentiers/">plusieurs itinéraires pourront être proposés</a>.
+         Selon le circuit choisi, comptez 5 à 8 heures de marche, dont 3 heures de montée à un rythme soutenu 
+         (800 mètres de dénivelé). Départ à pied du point de RDV. 
+      </p>
+    <h3 id="nextAlternative">Départs alternatifs</h3>
+        <p>Parfois nous organisons un rendez-vous supplémentaire pour explorer la partie sud du Salève.
+         Ces marches sont souvent plus longues, et en tout cas loin du téléphérique.
+         Les détails seront annoncés ici un ou deux jours avant. 
+      </p>
 
-      <h2 id="nextMeeting">Prochaine rando</h2>
+  </div>
 
-<p>   <iframe width="100%" height="268" seamless frameborder="0" scrolling="yes" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRS9Z1e0_GJNNeCXyFfErVj3JY1pFLUkiy3MHkc1WhhUFGVC623O98wgMmq1y0IOWX1aii9MNA_zMVz/pubchart?oid=95527878&amp;format=image"></iframe><p>
+  <div id="cards"></div>
 
 <p>
 
@@ -98,6 +127,55 @@
     <p>AGAS • 2026 •  <a href="https://www.saleve.xyz">www.saleve.xyz</a></p>
 
 </footer>
+
+  <script>
+    var d = new Date();
+    var today = new Date();
+    d.setDate(d.getDate() + (7 + 7 - d.getDay()) % 7);
+    if(today.getDay() == 0 && today.getHours() > 9){
+    d.setDate(d.getDate() + 7 );
+    }
+    var options = {'weekday': 'long', 'month': 'long', 'day': '2-digit', 'year': 'numeric'};
+    var date = d.toLocaleString('fr-CH', options);
+    document.getElementById('nextMeeting').innerHTML = "Prochaine rando depuis Veyrier: "+date.toString();
+
+
+    const scriptUrl = "https://script.google.com/macros/s/AKfycbxrDnesoYawPLQHClhvAdgQ99RgiN-gSm2uwStbYuDarsovduTptgTzfamoxxQPuR5X/exec"; 
+
+    async function loadHikes() {
+      const container = document.getElementById("cards");
+      container.innerHTML = "<p>Un instant...</p>";
+
+      try {
+        const response = await fetch(scriptUrl);
+        const hikes = await response.json();
+
+        container.innerHTML = "";
+
+        hikes.forEach(hike => {
+          const card = document.createElement("div");
+          card.className = "card";
+
+          card.innerHTML = `
+            <p><strong> ${hike.Rdv || ""}</strong></p>
+            <p> ${hike.Stops || ""}</p>
+            <p> ${hike.D || ""}</p>
+          `;
+
+          container.appendChild(card);
+        });
+
+      } catch (err) {
+        console.error(err);
+        container.innerHTML = "<p>Oops.</p>";
+      }
+    }
+
+    loadHikes();
+
+
+
+</script>
 
 </body>
 
