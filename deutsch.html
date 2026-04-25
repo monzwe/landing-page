@@ -10,48 +10,147 @@
 
 <body>
 
-<header class="header">
-  <a href="index.html">&#9664 Association genevoise des amis du Salève (AGAS)</a>  
-</header>
-
-<div class="container">
-  <img src="assets/saleve-banner730x140.jpg" alt="AGAS" style="width:100%;">
-  <div class="text-block">
-    <h1>Willkommen</h1>
-  </div>
+<div class="navbar">
+    <div>
+        <a href="https://www.saleve.xyz">Association genevoise des amis du Salève (AGAS)</a>
+        <div class="dropdown">
+            <a href="saleve.html">Le Salève</a>
+            <a href="https://www.saleve.xyz/agas/">L'association</a>
+            <a href="https://www.saleve.xyz/infos-pratiques/">Infos</a> 
+        </div>
+    </div>
 </div>
+
+<div id="top">
+
+    <img src="assets/saleve-banner.jpg" alt="AGAS" style="width:100%;">
+    <h1>Willkommen</h1>
+    <p style="text-align:center;">
+      <a href="english.html">Welcome</a>   •  
+      <a href="index.html">Bienvenue</a>  •  
+      <a href="english.html">Benvenidos</a>
+    </p>
 
 
 <h2>Gratis Bergwanderungen auf dem Salève</h2>
 
 <p>Jeden Sonntag treffen wir uns um 10:00 Uhr an der <a href="infos.html">Endhaltestelle der Buslinie 8 in Veyrier-Douane</a>, 
   100 Meter von der Grenze auf der Schweizer Seite. Aufbruch zu Fuss um Punkt 10:00. Ein Verantwortlicher des Genfer Vereins 
-  Association Genevoise des Amis du Salève (AGAS) erwartet Sie dort bei jedem Wetter. Anmeldung nicht erforderlich.
-Je nach Anzahl der anwesenden freiwilligen Guides können <a href="/sentiers/">mehrere Routen vorgeschlagen werden.</a>
-Je nach gewählter Route dauert die Wanderung 5 bis 8 Stunden, davon 3 Stunden bergauf im stetigen Rhythmus 
-(800 Meter Höhenunterschied). Gute Wanderschuhe, im Winter Steigeisen, im Sommer Kopfbedeckung und Sonnencreme, 
+  Association Genevoise des Amis du Salève (AGAS) erwartet euch dort bei jedem Wetter. Anmeldung nicht erforderlich.
+Gute Wanderschuhe, im Winter Steigeisen, im Sommer Kopfbedeckung und Sonnencreme, 
 ein oder zwei Stöcke, Regenkleidung, Pass, Geld, Picknick und Getränke sowie eine gute körperliche Verfassung 
 sind Voraussetzung.</p>
 
-<h2 id="nextMeeting"></h2>
+<h3 id="nextMeeting"></h3>
+<p>Je nach Anzahl der anwesenden freiwilligen Guides können <a href="/sentiers/">mehrere Routen vorgeschlagen werden.</a>
+Je nach gewählter Route dauert die Wanderung 5 bis 8 Stunden, davon 3 Stunden bergauf im stetigen Rhythmus 
+(800 Meter Höhenunterschied).</p>
 
-<p class="strong">Man braucht unbedingt <strong>eine gute körperliche Verfassung</strong> und gutes Schuhwerk 
+ <h3 id="nextAlternative">Zusätzliche Wanderungen</h3>
+        <p>Manchmal organisieren wir eine zusätzliche Wanderung am gleichen Tag, um den Süden des Salève zu erkunden.
+         Diese Wanderungen sind oft länger und fernab von der Seilbahn, daher den sportlichen Wanderern vorbehalten. 
+         Sie werden ein bis zwei Tage im Voraus hier angekündigt. 
+      </p>
+
+  </div>
+
+  <div id="cards"></div>
+
+  <h2 id="Achtung">Achtung</h2>
+
+<p class="warning">Man braucht unbedingt <strong>eine gute körperliche Verfassung</strong> und gutes Schuhwerk 
   (keine Barfußschuhe, Flip-Flops usw.!). Der Salève ist ein echter Berg, und Vorsicht ist geboten. 
-  Nehmen Sie auch ausreichend Wasser mit, da es entlang der Wanderwege auf dem Salève keine Quellen gibt.<br><br>
-
-Der Verein lehnt jede Verantwortung für Unfälle ab. Wir sind keine Bergführer. Wir nutzen einfach diese Plattform
-um Gleichgesinnte für Wanderungen in der Natur zusammenzubringen. Teilnahme auf eigenes Risiko. Jeder Wanderer ist selbst
- für seine eigene Sicherheit verantwortlich, sowie für einen ausreichenden Versicherungsschutz für alle Eventualitäten während des Ausflugs.
+  <br><b>Nehmt auch ausreichend Wasser mit</b>, da es entlang der Wanderwege auf dem Salève kein Trinkwasser gibt.
 </p>
 
-<script>
-var d = new Date();
-var today = new Date();
-d.setDate(d.getDate() + (7 + 7 - d.getDay()) % 7);
-if(today.getDay() == 0 && today.getHours() > 9){
-d.setDate(d.getDate() + 7 );
-}
-var options = {'weekday': 'long', 'month': 'long', 'day': '2-digit', 'year': 'numeric'};
-var date = d.toLocaleString('de-DE', options);
-document.getElementById('nextMeeting').innerHTML = "Nächste Wanderung: "+date.toString();
+</div>
+
+<footer id="bot">
+<p></p>
+
+    <div>
+
+        <a href="mailto:agas@saleve.xyz">
+        <span class="fa-stack fa-lg">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+        </span></a>
+
+        <a href="mailto:agas@saleve.xyz">
+        <span class="fa-stack fa-lg">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i class="fa fa-whatsapp fa-stack-1x fa-inverse"></i>
+        </span></a>
+
+        <a href="https://wa.me/41765034533">
+        <span class="fa-stack fa-lg">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+        </span></a>
+
+        <a href="https://www.facebook.com/LesAmisduSaleve">
+        <span class="fa-stack fa-lg">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i class="fa fa-facebook-square fa-stack-1x fa-inverse"></i>
+        </span></a>
+
+        <a href="+41225577593">
+        <span class="fa-stack fa-lg">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i class="fa fa fa-phone fa-stack-1x fa-inverse"></i>
+        </span></a>
+    </div>
+    <p class="decline"><a href="https://www.saleve.xyz/disclaimer/">Der Verein lehnt jegliche Haftung ab, Unfallversicherung ist Sache der Teilnehmer.</a></p>
+    <p><img src="assets/VilleGE.png" style="width:7vw; height: auto; padding-top: 10px;"><br>
+    Association subventionnée par la Ville de Genève et reconnue d'utilité publique • 
+    <a href="https://www.saleve.xyz/legal/">Mentions légales</a> • <a href="https://www.saleve.xyz/contact/">Contact</a></p>
+    <p>AGAS • 2026 •  <a href="https://www.saleve.xyz">www.saleve.xyz</a></p>
+
+</footer>
+
+  <script>
+    var d = new Date();
+    var today = new Date();
+    d.setDate(d.getDate() + (7 + 7 - d.getDay()) % 7);
+    if(today.getDay() == 0 && today.getHours() > 9){
+    d.setDate(d.getDate() + 7 );
+    }
+    var options = {'weekday': 'long', 'month': 'long', 'day': '2-digit', 'year': 'numeric'};
+    var date = d.toLocaleString('de-CH', options);
+    document.getElementById('nextMeeting').innerHTML = "Nächste Wanderung ab Veyrier: "+date.toString();
+
+
+    const scriptUrl = "https://script.google.com/macros/s/AKfycbxrDnesoYawPLQHClhvAdgQ99RgiN-gSm2uwStbYuDarsovduTptgTzfamoxxQPuR5X/exec"; 
+
+    async function loadHikes() {
+      const container = document.getElementById("cards");
+      container.innerHTML = "<p>Einen Moment...</p>";
+
+      try {
+        const response = await fetch(scriptUrl);
+        const hikes = await response.json();
+
+        container.innerHTML = "";
+
+        hikes.forEach(hike => {
+          const card = document.createElement("div");
+          card.className = "card";
+
+          card.innerHTML = `
+            <p><strong> ${hike.Rdv || ""}</strong></p>
+            <p> ${hike.Stops || ""}</p>
+            <p> ${hike.D || ""}</p>
+          `;
+
+          container.appendChild(card);
+        });
+
+      } catch (err) {
+        console.error(err);
+        container.innerHTML = "<p>Oops.</p>";
+      }
+    }
+
+    loadHikes();
+
 </script>

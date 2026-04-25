@@ -107,7 +107,11 @@ h2 {
 }
 
 h3 {
+    color: #414141;
     padding: 0 15vw;
+    border-width: 0 0 0 10px;
+    text-decoration: overline seashell;
+    text-decoration-thickness: 12px;
 }
 
 h4 {
@@ -149,6 +153,10 @@ p.decline {
     font-family: 'Courier New', Courier, monospace;
 }
 
+.card p {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+    }
 
 footer {
     width: 100%;
