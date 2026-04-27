@@ -45,6 +45,21 @@ body {
     text-align: left;
 }
 
+#languages a:link, a:visited {
+    font-weight:900;
+    color:#0b879c;
+    text-decoration: none;
+  background-color: seashell;
+  padding: 0 5px;
+  text-align: center;
+}
+
+#languages a:hover, a:active {
+  background-color: white;
+  color:#0abcdb;
+}
+
+
 p, ul {
     padding: 0 15vw;
     font-size: 18px;
@@ -93,9 +108,12 @@ text-decoration: none;
 
 h1 {
     color: white;
+    background-color:#444;
+    padding:1vw;
+    margin: 0;
     font-weight: 900;
     text-shadow: 2px 2px grey;
-    font-size: 56px;
+    font-size: 72px;
     text-align:center;
 }
 
@@ -140,7 +158,7 @@ p.warning {
     border-width: 0 0 0 10px;
     margin: 30px 15vw ;
     padding: 30px 10px;
-    font-family: 'Courier New', Courier, monospace;
+    font-family:'Courier New', Courier, monospace;
 }
 
 p.decline {
